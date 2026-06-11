@@ -1,4 +1,6 @@
-# kickstart.nvim
+# Custom KickStart_Nvim
+
+NVIM_APPNAME=KickStart_Nvim nvim
 
 ## Introduction
 
