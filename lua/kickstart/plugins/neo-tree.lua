@@ -20,7 +20,13 @@ require('neo-tree').setup {
     winbar = true,
     statusline = false,
   },
+  clipboard = {
+    sync = "universal",
+  },
   filesystem = {
+    filtered_items = {
+      visible = true,
+    },
     window = {
       mappings = {
         ['\\'] = 'close_window',
