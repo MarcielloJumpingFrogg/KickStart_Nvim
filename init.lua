@@ -827,6 +827,9 @@ do
 				},
 			},
 		},
+
+		cssls = {},
+		tailwindcss = {},
 	}
 
 	vim.pack.add({
@@ -852,6 +855,7 @@ do
 		"prettierd",
 		"prettier",
 		"tree-sitter-cli",
+		"css-lsp",
 	})
 
 	require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
