@@ -1117,6 +1117,7 @@ end
 -- ============================================================
 do
 	require("plugins.custom.lualine")
+	require("plugins.custom.githubcolors")
 
 
   -- Bubbles config for lualine

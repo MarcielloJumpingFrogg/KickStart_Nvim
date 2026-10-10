@@ -23,3 +23,20 @@ map("v", "//", "gc", { remap = true, desc = "Toggle comment" })
 -- map("n", "<leader>rn", vim.lsp.buff.rename)
 
 map({ "n", "v" }, "s", "", { remap = true })
+
+map("n", "<leader>l", "mini.map")
+
+local actions = require("telescope.actions")
+require("telescope").setup({
+	defaults = {
+		mappings = {
+			i = {
+				["<c-d>"] = actions.delete_buffer,
+			},
+			n = {
+				["<c-d>"] = actions.delete_buffer,
+				["dd"] = actions.delete_buffer,
+			},
+		},
+	},
+})
