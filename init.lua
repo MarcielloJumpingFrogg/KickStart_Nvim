@@ -772,8 +772,8 @@ do
 					preferences = {
 						importModuleSpecifierPreference = "relative",
 						importModuleSpecifierEnding = "minimal",
-						providePrefixAndSuffixTextForRename = false,
-						allowRenameOfImportPath = false,
+						providePrefixAndSuffixTextForRename = true,
+						allowRenameOfImportPath = true,
 					},
 				},
 
@@ -781,8 +781,8 @@ do
 					preferences = {
 						importModuleSpecifierPreference = "relative",
 						importModuleSpecifierEnding = "minimal",
-						providePrefixAndSuffixTextForRename = false,
-						allowRenameOfImportPath = false,
+						providePrefixAndSuffixTextForRename = true,
+						allowRenameOfImportPath = true,
 					},
 				},
 			},
