@@ -1189,6 +1189,7 @@ local colors = {
 	require("plugins.custom.comment")
 	require("plugins.custom.grug-far")
 	require("plugins.custom.fzf-lua")
+	require("plugins.custom.indent-blankline")
 	-- vim.pack.add({ gh("NMAC427/guess-indent.nvim") })
 end
 
