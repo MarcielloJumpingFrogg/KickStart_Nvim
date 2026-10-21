@@ -570,7 +570,7 @@ do
 	vim.keymap.set("n", "<leader>sh", ":FzfLua helptags<CR>", { desc = "[S]earch [H]elp" })
 	vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 	vim.keymap.set("n", "<leader>sfk", ":FzfLua keymaps<CR>", { desc = "[S]earch [F]zfLua [K]eymaps" })
-	vim.keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "[S]earch [ ] files" })
+	vim.keymap.set("n", "<leader><leader>", ":FzfLua files<CR>", { desc = "[S]earch [ ] files" })
 	vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 	vim.keymap.set("n", "<leader>sb", ":FzfLua builtin<CR>", { desc = "[S]earch [B]uiltin FzfLua" })
 	vim.keymap.set({ "n", "v" }, "<leader>sw", ":FzfLua grep_cword<CR>", { desc = "[S]earch current [W]ord" })
