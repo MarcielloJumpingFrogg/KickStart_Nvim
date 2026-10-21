@@ -579,7 +579,7 @@ do
 	vim.keymap.set("n", "<leader>sr", ":FzfLua resume<CR>", { desc = "[S]earch [R]esume" })
 	vim.keymap.set("n", "<leader>s.", ":FzfLua oldfiles<CR>", { desc = '[S]earch Recent Files ("." for repeat)' })
 	vim.keymap.set("n", "<leader>sc", builtin.commands, { desc = "[S]earch [C]ommands" })
-	vim.keymap.set("n", "<leader>b", ":FzfLua buffers<CR>", { desc = "[B] Find existing buffers" })
+	vim.keymap.set("n", "<leader>,", ":FzfLua buffers<CR>", { desc = "[B] Find existing buffers" })
 
 	-- Add Telescope-based LSP pickers when an LSP attaches to a buffer.
 	-- If you later switch picker plugins, this is where to update these mappings.
