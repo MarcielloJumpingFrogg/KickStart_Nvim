@@ -2,35 +2,37 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 
 local plugins = {
-  { src = 'https://github.com/nvim-neo-tree/neo-tree.nvim', version = vim.version.range '*' },
-  'https://github.com/nvim-lua/plenary.nvim',
-  'https://github.com/MunifTanjim/nui.nvim',
+	{ src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = vim.version.range("*") },
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/MunifTanjim/nui.nvim",
 }
 
 if vim.g.have_nerd_font then
-  table.insert(plugins, 'https://github.com/nvim-tree/nvim-web-devicons') -- not strictly required, but recommended
+	table.insert(plugins, "https://github.com/nvim-tree/nvim-web-devicons") -- not strictly required, but recommended
 end
 
 vim.pack.add(plugins)
 
-vim.keymap.set('n', '\\', '<Cmd>Neotree reveal<CR>', { desc = 'NeoTree reveal', silent = true })
+vim.keymap.set("n", "\\", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree reveal", silent = true })
 
-require('neo-tree').setup {
-  source_selector = {
-    winbar = true,
-    statusline = false,
-  },
-  clipboard = {
-    sync = "universal",
-  },
-  filesystem = {
-    filtered_items = {
-      visible = true,
-    },
-    window = {
-      mappings = {
-        ['\\'] = 'close_window',
-      },
-    },
-  },
-}
+require("neo-tree").setup({
+	source_selector = {
+		winbar = true,
+		statusline = false,
+	},
+	clipboard = {
+		sync = "universal",
+	},
+	filesystem = {
+		filtered_items = {
+			visible = true,
+		},
+		window = {
+			mappings = {
+				["\\"] = "close_window",
+				["v"] = "open_vsplit",
+				["s"] = "open_split",
+			},
+		},
+	},
+})

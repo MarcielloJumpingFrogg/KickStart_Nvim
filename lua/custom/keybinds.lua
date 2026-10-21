@@ -14,8 +14,10 @@ map(
 	{ desc = "Searches and then replaces the word under the cursors" }
 )
 map("n", ";", ":")
-map("n", "<A-j>", ":m +1<CR>")
-map("n", "<A-k>", ":m -2<CR>")
+map("n", "<A-j>", ":m .+1<CR>==")
+map("n", "<A-k>", ":m .-2<CR>==")
+map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 map("n", ">", "v>")
 map("n", "<", "v<")
 map("n", "//", "gcc", { remap = true, desc = "Toggle comment" })
@@ -40,3 +42,7 @@ require("telescope").setup({
 		},
 	},
 })
+
+map("n", "<leader>gv", ":vert winc ]<CR>", { desc = "Find and open declaration vertical" })
+map("n", "<leader>gs", ":horizontal winc ]<CR>", { desc = "Find and open declaration horizontal" })
+map("n", "<leader>o", ":Outline<CR>", { desc = "Open [O]utline" })
