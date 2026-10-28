@@ -46,3 +46,10 @@ require("telescope").setup({
 map("n", "<leader>gv", ":vert winc ]<CR>", { desc = "Find and open declaration vertical" })
 map("n", "<leader>gs", ":horizontal winc ]<CR>", { desc = "Find and open declaration horizontal" })
 map("n", "<leader>o", ":Outline<CR>", { desc = "Open [O]utline" })
+
+--Bufferline:
+
+map("n", "<A-,>", ":BufferLineCyclePrev<CR>")
+map("n", "<A-.>", ":BufferLineCycleNext<CR>")
+map("n", "<C-q>", ":bdelete<CR>")
+map("n", "<C-z>", ":close<CR>", { remap = true })
