@@ -1036,6 +1036,7 @@ do
 	require("plugins.custom.githubcolors")
 	require("plugins.custom.bufferline")
 	require("plugins.custom.outline")
+	require("plugins.custom.markdownPreview")
 
 
   -- Bubbles config for lualine
