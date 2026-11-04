@@ -870,6 +870,7 @@ do
 			--
 			-- See `:help blink-cmp-config-keymap` for defining your own keymap
 			preset = "enter",
+			["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
 
 			-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 			--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -1106,6 +1107,7 @@ local colors = {
 	require("plugins.custom.grug-far")
 	require("plugins.custom.fzf-lua")
 	require("plugins.custom.indent-blankline")
+	require("plugins.custom.ufo")
 	-- vim.pack.add({ gh("NMAC427/guess-indent.nvim") })
 end
 
@@ -1118,6 +1120,7 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.list = false
+vim.opt.foldmethod = "marker"
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
 	callback = function()
@@ -1128,6 +1131,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt.list = false
 		vim.opt.expandtab = true
 		vim.opt.linespace = 5
+		vim.opt.foldmethod = "marker"
 	end,
 })
 -- confirm
