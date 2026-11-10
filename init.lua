@@ -747,6 +747,19 @@ do
 		cssls = {},
 		tailwindcss = {},
 	}
+	--
+	-- vim.pack.add({
+	-- 	"pmizio/typescript-tools.nvim",
+	-- 	"nvim-lua/plenary.nvim",
+	-- })
+	--
+	-- require("typescript-tools").setup({
+	-- 	settings = {
+	-- 		tsserver_file_preferences = {
+	-- 			quotePreference = "single",
+	-- 		},
+	-- 	},
+	-- })
 
 	vim.pack.add({
 		gh("neovim/nvim-lspconfig"),
@@ -768,10 +781,29 @@ do
 	local ensure_installed = vim.tbl_keys(servers or {})
 	vim.list_extend(ensure_installed, {
 		-- You can add other tools here that you want Mason to install
+		"oxlint",
+		"oxfmt",
 		"prettierd",
 		"prettier",
 		"tree-sitter-cli",
 		"css-lsp",
+		"biome",
+		"biome",
+		"clangd",
+		"css-lsp",
+		"csskit",
+		"eslint-lsp",
+		"eslint_d",
+		"gopls",
+		"html-lsp",
+		"json-lsp",
+		"lua-language-server",
+		"markdownlint",
+		"markuplint",
+		"shfmt",
+		"tailwindcss-language-server",
+		"tree-sitter-cli",
+		"typescript-language-server",
 	})
 
 	require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
@@ -798,6 +830,7 @@ do
 				python = true,
 				javascript = true,
 				typescript = true,
+				json = true,
 			}
 			if enabled_filetypes[vim.bo[bufnr].filetype] then
 				return { timeout_ms = 500 }
@@ -815,8 +848,9 @@ do
 			-- python = { "isort", "black" },
 			--
 			-- You can use 'stop_after_first' to run the first available formatter from the list
-			javascript = { "prettierd", "prettier", stop_after_first = true },
-			typescript = { "prettierd", "prettier", stop_after_first = true },
+			javascript = { "oxfmt", "oxlint", "prettierd", "prettier", stop_after_first = true },
+			typescript = { "oxfmt", "oxlint", "prettier", stop_after_first = true },
+			json = { "biome" },
 		},
 	})
 
@@ -934,10 +968,9 @@ do
 		"query",
 		"vim",
 		"vimdoc",
-		"javascript",
-		"typescript",
 		"prisma",
 		"css",
+		"json",
 	}
 	require("nvim-treesitter").install(parsers)
 
@@ -1038,6 +1071,7 @@ do
 	require("plugins.custom.bufferline")
 	require("plugins.custom.outline")
 	require("plugins.custom.markdownPreview")
+	require("plugins.custom.nordic_colorscheme")
 
 
   -- Bubbles config for lualine
@@ -1108,6 +1142,7 @@ local colors = {
 	require("plugins.custom.fzf-lua")
 	require("plugins.custom.indent-blankline")
 	require("plugins.custom.ufo")
+	require("plugins.custom.garbage_day")
 	-- vim.pack.add({ gh("NMAC427/guess-indent.nvim") })
 end
 
